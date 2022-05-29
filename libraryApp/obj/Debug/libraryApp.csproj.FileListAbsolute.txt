@@ -23,3 +23,5 @@ C:\Users\bogda\source\repos\libraryApp\libraryApp\obj\Debug\libraryApp.csproj.Co
 C:\Users\bogda\source\repos\libraryApp\libraryApp\obj\Debug\libraryApp.exe
 C:\Users\bogda\source\repos\libraryApp\libraryApp\obj\Debug\libraryApp.pdb
 C:\Users\bogda\source\repos\libraryApp\libraryApp\obj\Debug\libraryApp.regForm.resources
+C:\Users\bogda\source\repos\libraryApp\libraryApp\obj\Debug\libraryApp.appForm.resources
+C:\Users\bogda\source\repos\libraryApp\libraryApp\obj\Debug\libraryApp.reservForm.resources

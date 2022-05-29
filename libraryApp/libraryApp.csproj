@@ -50,6 +50,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="appForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="appForm.Designer.cs">
+      <DependentUpon>appForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Book.cs" />
+    <Compile Include="reservForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reservForm.Designer.cs">
+      <DependentUpon>reservForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
     <Compile Include="DB.cs" />
     <Compile Include="loginForm.cs">
       <SubType>Form</SubType>
@@ -65,6 +79,9 @@
     <Compile Include="regForm.Designer.cs">
       <DependentUpon>regForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="appForm.resx">
+      <DependentUpon>appForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="loginForm.resx">
       <DependentUpon>loginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -79,6 +96,9 @@
     </Compile>
     <EmbeddedResource Include="regForm.resx">
       <DependentUpon>regForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reservForm.resx">
+      <DependentUpon>reservForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -16,6 +16,8 @@ namespace libraryApp
 
     public partial class regForm : Form
     {
+        static public String login;
+        DB db = new DB();
         Font myFont;
         Font tbFont;
         Font btFont;
@@ -181,7 +183,6 @@ namespace libraryApp
             }
             if (flag)
             {
-                DB db = new DB();
                 MySqlCommand command = new MySqlCommand("INSERT INTO `users`(`login`, `password`, `name`, `surname`) VALUES (@login, @password, @name, @surname)", db.getConnection());
                 command.Parameters.Add("@login", MySqlDbType.VarChar).Value = loginTextBox.Text;
                 command.Parameters.Add("@password", MySqlDbType.VarChar).Value = passwordTextBox.Text;
@@ -192,7 +193,12 @@ namespace libraryApp
 
                 if (command.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("All good");
+                    login = loginTextBox.Text;
+                    appForm form = new appForm();
+                    form.Owner = this;
+                    this.Hide();
+                    form.ShowDialog();
+                    this.Close();
                 }
                 else
                 {
@@ -206,7 +212,6 @@ namespace libraryApp
 
         private bool isUserExists() 
         {
-            DB db = new DB();
 
             DataTable table = new DataTable();
 

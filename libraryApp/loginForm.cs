@@ -14,8 +14,8 @@ namespace libraryApp
 {
     public partial class loginForm : Form
     {
-
-        Font myFont;
+        static public string login;
+        public Font myFont;
         Font tbFont;
         Font btFont;
 
@@ -128,7 +128,13 @@ namespace libraryApp
             adapter.Fill(table);
 
             if (table.Rows.Count > 0)
-                MessageBox.Show("Yes");
+            {
+                login = logTextBox.Text;
+                appForm form = new appForm();
+                this.Hide();
+                form.ShowDialog();
+                this.Close();
+            }
             else
                 MessageBox.Show("No");
             LoadFont();
@@ -137,8 +143,9 @@ namespace libraryApp
         private void registerLabelNav_Click(object sender, EventArgs e)
         {
             Form form = new regForm();
-            form.Show();
-            //this.Visible = false;
+            this.Hide();
+            form.ShowDialog();
+            this.Close();
         }
     }
 }
